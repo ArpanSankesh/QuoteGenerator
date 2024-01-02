@@ -11,16 +11,12 @@ const generateQuote = function () {
     .then((result) => {
       console.log(result);
       quote.innerHTML = `<i class="fa-solid fa-quote-left"></i> ${result.content} <i class="fa-solid fa-quote-right"></i>`;
-      author.innerHTML = `-${result.author}`
+      author.innerHTML = `-${result.author}`;
 
-      localStorage.setItem('lastQuote', JSON.stringify(result));
+      localStorage.setItem("lastQuote", JSON.stringify(result));
     });
 };
 
-
-
-document.addEventListener('DOMCOnthentLoaded', generateQuote)
+document.addEventListener("DOMCOnthentLoaded", generateQuote);
 
 generate.addEventListener("click", generateQuote);
-
-
