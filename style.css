@@ -23,7 +23,6 @@
 .content{
     background-color: var(--secondary-color);
     width: 35rem;
-    /* height: 20rem; */
     border-radius: 1.2rem ;
     display: flex;
     /* align-items: center; */
@@ -99,3 +98,122 @@
     transform: scale(1.03);
 }
 
+@media(max-width:580px) {
+    .content{
+        width: 30rem;
+    }
+    .content h1{
+        font-size: 2rem;
+    }
+    .quote{
+        font-size: 1rem;
+    }
+    .author-name{
+        font-size: 0.9rem;
+    }
+    .btn{
+        width: 2.8rem;
+    height: 2.8rem;
+    }
+} 
+
+@media(max-width:480px) {
+    .content{
+        width: 27rem;
+    }
+    .content h1{
+        font-size: 2rem;
+    }
+    .quote{
+        font-size: 0.95rem;
+    }
+    .author-name{
+        font-size: 0.8rem;
+    }
+    .btn{
+        width: 2.8rem;
+    height: 2.8rem;
+    }
+} 
+
+@media (max-width:430px) {
+    .content{
+        width: 23rem;
+        padding: 20px 30px;
+    }
+    .content h1{
+        font-size: 1.8rem;
+    }
+    .quote{
+        font-size: 0.95rem;
+    }
+    .quote-container i{
+        font-size: 1rem;
+    }
+    .quote{
+        font-size: 0.95rem;
+    }
+
+    .author-name{
+        font-size: 0.8rem;
+    }
+    .btn{
+        width: 2.2rem;
+    height: 2.2rem;
+    }
+} 
+
+@media screen and (max-width:380px) {
+    .content{
+        width: 21rem;
+    }
+    .content h1{
+        font-size: 1.7rem;
+    }
+    .quote{
+        font-size: 0.79rem;
+    }
+    .quote-container i{
+        font-size: 0.9rem;
+    }
+    .author-name{
+        font-size: 0.7rem;
+    }
+    .btn{
+        width: 2rem;
+    height: 2rem;
+    }
+    .generate{
+        font-size: 12px;
+    }
+} 
+
+@media screen and (max-width:280px) {
+    .content{
+        width: 16rem;
+    }
+    .content h1{
+        font-size: 1.3rem;
+    }
+    .quote{
+        font-size: 0.7rem;
+    }
+    .quote-container i{
+        font-size: 0.9rem;
+    }
+    .author-name{
+        font-size: 0.68rem;
+    }
+    .btn{
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 0;
+    }
+    .btn i{
+        font-size: 0.8rem;
+    }
+    
+    .generate{
+        font-size: 10px;
+    }
+} 
