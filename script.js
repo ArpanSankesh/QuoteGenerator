@@ -25,7 +25,7 @@ const generateQuote = function () {
     });
 };
 
-window.addEventListener("DOMcontentLoaded", generateQuote);
+// window.addEventListener("DOMcontentLoaded", generateQuote);
 
 speakBtn.addEventListener('click', function(){
     if (speech) {
