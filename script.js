@@ -25,10 +25,10 @@ const generateQuote = function () {
     });
 };
 
-// document.addEventListener("DOMCOnthentLoaded", generateQuote);
+window.addEventListener("load", generateQuote);
 
 speakBtn.addEventListener('click', function(){
-    if (speech ) {
+    if (speech) {
         speechSynthesis.cancel(); 
         return;
     }
