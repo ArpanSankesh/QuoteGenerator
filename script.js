@@ -5,7 +5,6 @@ const speakBtn = document.querySelector(".speach");
 const copyBtn = document.querySelector(".copy");
 const twiterBTn = document.querySelector(".twiter");
 
-let speech = null;
 
 const generateQuote = function () {
   QuoteReader();
@@ -13,19 +12,20 @@ const generateQuote = function () {
   generateBtn.classList.add("loading");
   generateBtn.innerHTML = "Loading...";
   fetch("https://api.quotable.io/random")
-    .then((res) => res.json())
-    .then((result) => {
-      console.log(result);
-      quote.innerHTML = `<i class="fa-solid fa-quote-left"></i> ${result.content} <i class="fa-solid fa-quote-right"></i>`;
-      author.innerHTML = `-${result.author}`;
-      generateBtn.classList.remove("loading");
-      generateBtn.innerHTML = "NEW QUOTE";
-
-      //   localStorage.setItem("lastQuote", JSON.stringify(result));
-    });
+  .then((res) => res.json())
+  .then((result) => {
+    console.log(result);
+    quote.innerHTML = `<i class="fa-solid fa-quote-left"></i> ${result.content} <i class="fa-solid fa-quote-right"></i>`;
+    author.innerHTML = `-${result.author}`;
+    generateBtn.classList.remove("loading");
+    generateBtn.innerHTML = "NEW QUOTE";
+    
+    //   localStorage.setItem("lastQuote", JSON.stringify(result));
+  });
 };
 
 // window.addEventListener("DOMcontentLoaded", generateQuote);
+let speech = null;
 
 const QuoteReader = function () {
   if (speech && speechSynthesis) {
